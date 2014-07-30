@@ -25,7 +25,7 @@ function Device ( id, info, callback ) {
 
     this.client = new Client(
         {
-            host: info[0], port: 7000 
+            host: info.addresses[0], port: 7000 
             // ,user: 'zfkun', pass: ''
         },
         function () {
