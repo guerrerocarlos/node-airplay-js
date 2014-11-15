@@ -8,7 +8,7 @@
   },
   "contributors": [],
   "dependencies": {
-    "mdns-js": "shahriman/node-mdns-js",
+    "mdns-js": "git+https://github.com/kmpm/node-mdns-js",
     "plist-with-patches": "0.5.1"
   },
   "keywords": [
