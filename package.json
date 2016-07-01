@@ -1,7 +1,7 @@
 {
   "name": "airplay-js",
   "description": "JS Native Apple AirPlay client library for AppleTV",
-  "version": "0.2.15",
+  "version": "0.3.00",
   "author": {
     "name": "zfkun",
     "email": "zfkun@msn.com"
