@@ -5,13 +5,11 @@ var browser = require('../airplay').createBrowser();
 
 var media = {
     url : 'http://commondatastorage.googleapis.com/gtv-videos-bucket/big_buck_bunny_1080p.mp4',
-    file: '/Users/carlos/Desktop/a.mp4',
     subtitles: [{
         language: 'en-US',
         url: 'http://carlosguerrero.com/captions_styled.vtt',
         name: 'English',
-    }
-    ],
+    }],
 }
 
 browser.on( 'deviceOn', function( device ) {
@@ -53,11 +51,11 @@ browser.on( 'deviceOn', function( device ) {
     hls.open( media, function ( info ) {
 
         device.simpleplay( hls.getURI(), '0.000000', function ( res ) {
-            console.info( '开始播放啦: ', res );
+            console.info( 'result: ', res );
 
             setTimeout(function(){
                 device.status( function ( info ) {
-                    console.info( 'AppleTV 状态:', info ? info : '未播放' );
+                    console.info( 'AppleTV status:', info ? info : 'unavailable' );
                     if ( info ) {
                         console.log(info)
                     }
@@ -66,10 +64,6 @@ browser.on( 'deviceOn', function( device ) {
         });
 
     });
-
-    // device.status( function ( info ) {
-    //     console.info( 'AppleTV 状态:', info ? info : '未播放' );
-    // });
 });
 
 browser.on( 'deviceOff', function( device ) {
@@ -77,10 +71,3 @@ browser.on( 'deviceOff', function( device ) {
 });
 
 browser.start();
-
-// setTimeout(
-//     function(){
-//         console.info( browser.getDevices( true ) );
-//     },
-//     2000
-// );

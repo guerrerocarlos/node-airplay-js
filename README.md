@@ -22,6 +22,14 @@ browser.on( 'deviceOn', function( device ) {
 browser.start();
 ```
 
+## Testing
+
+```
+npm install
+npm test
+```
+...then, turn on your AppleTV!
+
 
 ## Help
 
