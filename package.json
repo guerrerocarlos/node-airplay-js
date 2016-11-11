@@ -8,6 +8,7 @@
   },
   "contributors": [],
   "dependencies": {
+    "bonjour": "^3.5.0",
     "mdns-js": "0.5.0",
     "plist-with-patches": "0.5.1"
   },
@@ -19,7 +20,7 @@
     "hls",
     "ffmpeg"
   ],
-  "main": "airplay.js",
+  "main": "index.js",
   "scripts": {
     "test": "node test/test"
   }
